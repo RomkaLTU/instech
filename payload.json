@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "writer": "6a85dd86-bde7-4d04-a7bf-f13b53a0955e",
+  "name": "Romas",
+  "email": "hello@codesomelabs.com",
+  "updated_at": "2026-11-06T11:38:34Z",
+  "lessons": [
+    {
+      "ticket": "ROMKALTUINSTECH-2",
+      "phase": "verify",
+      "failure_type": "ui",
+      "attempted_fix": "repair",
+      "evidence": [
+        "Limits text 'Driver age 18–100 in whole years; car value €1–€1,000,000 in whole euros.' is shown and both endpoints are accepted: The /calculator page does not show the limits sentence anywhere; it only shows the per-field hints 'Whole euros from €1 to €1,000,000.' and 'Whole years from 18 to 100.' (the endpoints themselves are accepted)."
+      ],
+      "result": "repaired",
+      "lesson": "When a spec quotes exact user-facing copy, render that exact sentence verbatim as a visible element; per-field hints that paraphrase the limits do not satisfy it.",
+      "tags": [
+        "ui",
+        "copy",
+        "limits",
+        "calculator"
+      ],
+      "recorded_at": "2026-11-06T11:38:34Z",
+      "class": "spec-copy-not-verbatim",
+      "paths": [
+        "app/calculator/"
+      ]
+    },
+    {
+      "ticket": "ROMKALTUINSTECH-1",
+      "phase": "verify",
+      "failure_type": "other",
+      "attempted_fix": "repair",
+      "evidence": [
+        "[docs] Project documentation must not be left wrong by the change (Geist font loading removed per 'Geist font loading and dangling Geist variable references are removed'): README.md line 21 still says the project uses next/font to automatically load Geist, which app/layout.tsx no longer does."
+      ],
+      "result": "repaired",
+      "lesson": "When removing or replacing a feature in code, grep the README and docs for mentions of it and update them in the same change so documentation never contradicts the code.",
+      "tags": [
+        "docs",
+        "readme",
+        "font",
+        "cleanup"
+      ],
+      "recorded_at": "2026-11-06T11:31:17Z",
+      "class": "stale-docs-after-removal",
+      "paths": [
+        "README.md"
+      ]
+    }
+  ]
+}
